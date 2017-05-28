@@ -51,16 +51,20 @@ namespace ebay
         {
             try
             {
-                LstOrders.Items.Clear();
-            
+                DataTable dt = new DataTable();
+                dt.Columns.Add(new DataColumn("ClmOrderId"));
+                dt.Columns.Add(new DataColumn("ClmStatus"));
+                dt.Columns.Add(new DataColumn("ClmCreator"));
+                dt.Columns.Add(new DataColumn("ClmItems"));
+
                 GetOrdersCall apicall = new GetOrdersCall(Program.GetApiContext());
 
                 TimeFilter fltr = new TimeFilter();
 
-                fltr.TimeFrom = DatePickStartFrom.Value; 
+                fltr.TimeFrom = DatePickStartFrom.Value;
                 fltr.TimeTo = DatePickStartTo.Value;
 
-              
+
                 OrderTypeCollection orders = apicall.GetOrders(fltr, (TradingRoleCodeType)Enum.Parse(typeof(TradingRoleCodeType), CboRole.SelectedItem.ToString()), (OrderStatusCodeType)Enum.Parse(typeof(OrderStatusCodeType), CboStatus.SelectedItem.ToString()));
                 if (orders.Count == 0)
                 {
@@ -70,11 +74,11 @@ namespace ebay
                 }
                 foreach (OrderType order in orders)
                 {
-                    string[] listparams = new string[5];
-                    listparams[0] = order.OrderID;
-                    listparams[1] = order.OrderStatus.ToString();
-                    listparams[2] = order.CreatingUserRole.ToString();
-                    listparams[3] = order.AmountSaved.Value.ToString();
+                    //string[] listparams = new string[5];
+                    //listparams[0] = order.OrderID;
+                    //listparams[1] = order.OrderStatus.ToString();
+                    //listparams[2] = order.CreatingUserRole.ToString();
+                    //listparams[3] = order.AmountSaved.Value.ToString();
                     string[] itemids = new string[order.TransactionArray.Count];
                     int indx = 0;
                     foreach (TransactionType trans in order.TransactionArray)
@@ -82,12 +86,20 @@ namespace ebay
                         itemids[indx] = trans.Item.ItemID;
                         indx++;
                     }
-                    listparams[4] = String.Join(", ", itemids);
+                    //listparams[4] = String.Join(", ", itemids);
 
-                    ListViewItem vi = new ListViewItem(listparams);
-                    LstOrders.Items.Add(vi);
+                    //ListViewItem vi = new ListViewItem(listparams);
+                    //LstOrders.Items.Add(vi);
 
+                    DataRow dr = dt.NewRow();
+                    dr["ClmOrderId"] = order.OrderID;
+                    dr["ClmStatus"] = order.OrderStatus.ToString();
+                    dr["ClmCreator"] = order.CreatingUserRole.ToString();
+                    dr["ClmItems"] = String.Join(", ", itemids); 
+                    dt.Rows.Add(dr);
                 }
+
+                this.dataGridView1.DataSource = dt;
             }
             catch (Exception ex)
             {

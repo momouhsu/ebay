@@ -38,14 +38,14 @@
             this.LblStartSep = new System.Windows.Forms.Label();
             this.GrpResult = new System.Windows.Forms.GroupBox();
             this.LblOrders = new System.Windows.Forms.Label();
-            this.LstOrders = new System.Windows.Forms.ListView();
-            this.ClmOrderId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ClmStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ClmCreator = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ClmSaved = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ClmItems = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BtnGetOrders = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ClmOrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GrpResult.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // LblTimeRange
@@ -116,8 +116,8 @@
             // 
             // GrpResult
             // 
+            this.GrpResult.Controls.Add(this.dataGridView1);
             this.GrpResult.Controls.Add(this.LblOrders);
-            this.GrpResult.Controls.Add(this.LstOrders);
             this.GrpResult.Location = new System.Drawing.Point(22, 173);
             this.GrpResult.Name = "GrpResult";
             this.GrpResult.Size = new System.Drawing.Size(652, 321);
@@ -133,47 +133,6 @@
             this.LblOrders.TabIndex = 12;
             this.LblOrders.Text = "Orders:";
             // 
-            // LstOrders
-            // 
-            this.LstOrders.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ClmOrderId,
-            this.ClmStatus,
-            this.ClmCreator,
-            this.ClmSaved,
-            this.ClmItems});
-            this.LstOrders.GridLines = true;
-            this.LstOrders.Location = new System.Drawing.Point(10, 78);
-            this.LstOrders.Name = "LstOrders";
-            this.LstOrders.Size = new System.Drawing.Size(624, 232);
-            this.LstOrders.TabIndex = 13;
-            this.LstOrders.UseCompatibleStateImageBehavior = false;
-            this.LstOrders.View = System.Windows.Forms.View.Details;
-            // 
-            // ClmOrderId
-            // 
-            this.ClmOrderId.Text = "Order Id";
-            this.ClmOrderId.Width = 95;
-            // 
-            // ClmStatus
-            // 
-            this.ClmStatus.Text = "Status";
-            this.ClmStatus.Width = 75;
-            // 
-            // ClmCreator
-            // 
-            this.ClmCreator.Text = "Creator";
-            this.ClmCreator.Width = 84;
-            // 
-            // ClmSaved
-            // 
-            this.ClmSaved.Text = "Amount Saved";
-            this.ClmSaved.Width = 91;
-            // 
-            // ClmItems
-            // 
-            this.ClmItems.Text = "Items";
-            this.ClmItems.Width = 162;
-            // 
             // BtnGetOrders
             // 
             this.BtnGetOrders.Location = new System.Drawing.Point(242, 129);
@@ -183,11 +142,49 @@
             this.BtnGetOrders.Text = "GetOrders";
             this.BtnGetOrders.Click += new System.EventHandler(this.BtnGetOrders_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClmOrderId,
+            this.ClmStatus,
+            this.ClmCreator,
+            this.ClmItems});
+            this.dataGridView1.Location = new System.Drawing.Point(13, 69);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(620, 246);
+            this.dataGridView1.TabIndex = 13;
+            // 
+            // ClmOrderId
+            // 
+            this.ClmOrderId.DataPropertyName = "ClmOrderId";
+            this.ClmOrderId.HeaderText = "Order Id";
+            this.ClmOrderId.Name = "ClmOrderId";
+            // 
+            // ClmStatus
+            // 
+            this.ClmStatus.DataPropertyName = "ClmStatus";
+            this.ClmStatus.HeaderText = "Status";
+            this.ClmStatus.Name = "ClmStatus";
+            // 
+            // ClmCreator
+            // 
+            this.ClmCreator.DataPropertyName = "ClmCreator";
+            this.ClmCreator.HeaderText = "Creator";
+            this.ClmCreator.Name = "ClmCreator";
+            // 
+            // ClmItems
+            // 
+            this.ClmItems.DataPropertyName = "ClmItems";
+            this.ClmItems.HeaderText = "Items";
+            this.ClmItems.Name = "ClmItems";
+            // 
             // FrmGetOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 517);
+            this.ClientSize = new System.Drawing.Size(1125, 751);
             this.Controls.Add(this.LblTimeRange);
             this.Controls.Add(this.CboRole);
             this.Controls.Add(this.LblRole);
@@ -201,6 +198,7 @@
             this.Name = "FrmGetOrders";
             this.Text = "FrmGetOrders";
             this.GrpResult.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,12 +214,11 @@
         private System.Windows.Forms.Label LblStartSep;
         private System.Windows.Forms.GroupBox GrpResult;
         private System.Windows.Forms.Label LblOrders;
-        private System.Windows.Forms.ListView LstOrders;
-        private System.Windows.Forms.ColumnHeader ClmOrderId;
-        private System.Windows.Forms.ColumnHeader ClmStatus;
-        private System.Windows.Forms.ColumnHeader ClmCreator;
-        private System.Windows.Forms.ColumnHeader ClmSaved;
-        private System.Windows.Forms.ColumnHeader ClmItems;
         private System.Windows.Forms.Button BtnGetOrders;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmOrderId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmCreator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClmItems;
     }
 }

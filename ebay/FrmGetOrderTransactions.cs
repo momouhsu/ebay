@@ -23,7 +23,19 @@ namespace ebay
         {
 
             GetOrderTransactionsCall apicall = new GetOrderTransactionsCall(Program.GetApiContext());
-            
+            StringCollection orderids = new StringCollection(TxtTransid.Text.Split(','));
+     
+            OrderTypeCollection list = apicall.GetOrderTransactions(orderids);
+            if(list.Count == 0)
+            {
+
+                MessageBox.Show("There is no order!");
+                return;
+            }
+
+            TxtXml.Text = apicall.SoapResponse;
         }
+
+       
     }
 }
