@@ -28,5 +28,17 @@ namespace ebay
             new FrmGetItemTransactions().Show();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new FrmGetOrderTransactions().Show();
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            new FrmAccount().Show();
+        }
     }
 }

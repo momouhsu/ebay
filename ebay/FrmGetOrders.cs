@@ -52,7 +52,7 @@ namespace ebay
             try
             {
                 LstOrders.Items.Clear();
-
+            
                 GetOrdersCall apicall = new GetOrdersCall(Program.GetApiContext());
 
                 TimeFilter fltr = new TimeFilter();
@@ -60,7 +60,7 @@ namespace ebay
                 fltr.TimeFrom = DatePickStartFrom.Value; 
                 fltr.TimeTo = DatePickStartTo.Value;
 
-
+              
                 OrderTypeCollection orders = apicall.GetOrders(fltr, (TradingRoleCodeType)Enum.Parse(typeof(TradingRoleCodeType), CboRole.SelectedItem.ToString()), (OrderStatusCodeType)Enum.Parse(typeof(OrderStatusCodeType), CboStatus.SelectedItem.ToString()));
                 if (orders.Count == 0)
                 {

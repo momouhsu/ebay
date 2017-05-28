@@ -46,6 +46,12 @@ namespace ebay
                 apiCredential.eBayToken =
                     ConfigurationManager.AppSettings["UserAccount.ApiToken"];
                 apiContext.ApiCredential = apiCredential;
+                apiContext.ApiCredential.ApiAccount.Application =
+                    ConfigurationManager.AppSettings["Application"];
+                apiContext.ApiCredential.ApiAccount.Certificate =
+                    ConfigurationManager.AppSettings["Certificate"];
+                apiContext.ApiCredential.ApiAccount.Developer =
+                    ConfigurationManager.AppSettings["Developer"];
                 //set eBay Site target to US
                 apiContext.Site = SiteCodeType.US;
 

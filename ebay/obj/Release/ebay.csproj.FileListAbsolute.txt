@@ -1,8 +1,6 @@
 E:\proj\test\ebay\ebay\bin\Release\ebay.exe.config
 E:\proj\test\ebay\ebay\bin\Release\ebay.exe
 E:\proj\test\ebay\ebay\bin\Release\ebay.pdb
-E:\proj\test\ebay\ebay\bin\Release\eBay.Service.dll
-E:\proj\test\ebay\ebay\bin\Release\eBay.Service.SDK.Attribute.dll
 E:\proj\test\ebay\ebay\bin\Release\Interop.MSXML2.dll
 E:\proj\test\ebay\ebay\bin\Release\eBay.Service.xml
 E:\proj\test\ebay\ebay\bin\Release\eBay.Service.SDK.Attribute.xml
@@ -14,3 +12,4 @@ E:\proj\test\ebay\ebay\obj\Release\ebay.Properties.Resources.resources
 E:\proj\test\ebay\ebay\obj\Release\ebay.csproj.GenerateResource.Cache
 E:\proj\test\ebay\ebay\obj\Release\ebay.exe
 E:\proj\test\ebay\ebay\obj\Release\ebay.pdb
+E:\proj\test\ebay\ebay\obj\Release\ebay.csprojResolveAssemblyReference.cache

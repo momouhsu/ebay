@@ -60,6 +60,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAccount.Designer.cs">
+      <DependentUpon>FrmAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGetOrders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,12 @@
     <Compile Include="FrmGetItemTransactions.Designer.cs">
       <DependentUpon>FrmGetItemTransactions.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGetOrderTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGetOrderTransactions.Designer.cs">
+      <DependentUpon>FrmGetOrderTransactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +95,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAccount.resx">
+      <DependentUpon>FrmAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGetOrders.resx">
       <DependentUpon>FrmGetOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGetItemTransactions.resx">
       <DependentUpon>FrmGetItemTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGetOrderTransactions.resx">
+      <DependentUpon>FrmGetOrderTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -112,7 +130,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
