@@ -23,7 +23,6 @@ E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.SDK.Attribute.dll
 E:\proj\teddy\mo\ebay\ebay\bin\Release\Interop.MSXML2.dll
 E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.xml
 E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.SDK.Attribute.xml
-E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.csprojResolveAssemblyReference.cache
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.Form1.resources
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.FrmAccount.resources
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.FrmGetOrders.resources
