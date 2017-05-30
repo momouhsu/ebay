@@ -37,13 +37,15 @@
             this.DatePickStartFrom = new System.Windows.Forms.DateTimePicker();
             this.LblStartSep = new System.Windows.Forms.Label();
             this.GrpResult = new System.Windows.Forms.GroupBox();
-            this.LblOrders = new System.Windows.Forms.Label();
-            this.BtnGetOrders = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ClmOrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LblOrders = new System.Windows.Forms.Label();
+            this.BtnGetOrders = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.GrpResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -125,23 +127,6 @@
             this.GrpResult.TabStop = false;
             this.GrpResult.Text = "Result";
             // 
-            // LblOrders
-            // 
-            this.LblOrders.Location = new System.Drawing.Point(10, 33);
-            this.LblOrders.Name = "LblOrders";
-            this.LblOrders.Size = new System.Drawing.Size(134, 32);
-            this.LblOrders.TabIndex = 12;
-            this.LblOrders.Text = "Orders:";
-            // 
-            // BtnGetOrders
-            // 
-            this.BtnGetOrders.Location = new System.Drawing.Point(242, 129);
-            this.BtnGetOrders.Name = "BtnGetOrders";
-            this.BtnGetOrders.Size = new System.Drawing.Size(154, 32);
-            this.BtnGetOrders.TabIndex = 94;
-            this.BtnGetOrders.Text = "GetOrders";
-            this.BtnGetOrders.Click += new System.EventHandler(this.BtnGetOrders_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -180,11 +165,48 @@
             this.ClmItems.HeaderText = "Items";
             this.ClmItems.Name = "ClmItems";
             // 
+            // LblOrders
+            // 
+            this.LblOrders.Location = new System.Drawing.Point(10, 33);
+            this.LblOrders.Name = "LblOrders";
+            this.LblOrders.Size = new System.Drawing.Size(134, 32);
+            this.LblOrders.TabIndex = 12;
+            this.LblOrders.Text = "Orders:";
+            // 
+            // BtnGetOrders
+            // 
+            this.BtnGetOrders.Location = new System.Drawing.Point(127, 135);
+            this.BtnGetOrders.Name = "BtnGetOrders";
+            this.BtnGetOrders.Size = new System.Drawing.Size(154, 32);
+            this.BtnGetOrders.TabIndex = 94;
+            this.BtnGetOrders.Text = "GetOrders";
+            this.BtnGetOrders.Click += new System.EventHandler(this.BtnGetOrders_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(301, 135);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 32);
+            this.button1.TabIndex = 104;
+            this.button1.Text = "Import";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(477, 135);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 32);
+            this.button2.TabIndex = 105;
+            this.button2.Text = "Clear DB";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmGetOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 751);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LblTimeRange);
             this.Controls.Add(this.CboRole);
             this.Controls.Add(this.LblRole);
@@ -220,5 +242,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmCreator;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClmItems;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

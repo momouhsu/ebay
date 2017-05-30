@@ -32,3 +32,4 @@ E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.FrmMain.resources
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.Properties.Resources.resources
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.csproj.GenerateResource.Cache
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.FrmGetMyMessagesCall.resources
+E:\proj\teddy\mo\ebay\ebay\bin\Release\MySql.Data.dll

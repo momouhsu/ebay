@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <GetOrderTransactionsResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+      <Timestamp>2017-05-30T05:35:38.480Z</Timestamp>
+      <Ack>Success</Ack>
+      <CorrelationID>3a249956-bc57-4f29-8d66-9fba60da89e2</CorrelationID>
+      <Version>1001</Version>
+      <Build>E1001_CORE_APIXO_18331499_R1</Build>
+      <OrderArray>
+        <Order>
+          <OrderID>201702147986-1528357347010</OrderID>
+          <OrderStatus>Completed</OrderStatus>
+          <AdjustmentAmount currencyID="USD">0.0</AdjustmentAmount>
+          <AmountPaid currencyID="USD">6.0</AmountPaid>
+          <AmountSaved currencyID="USD">0.0</AmountSaved>
+          <CheckoutStatus>
+            <eBayPaymentStatus>NoPaymentFailure</eBayPaymentStatus>
+            <LastModifiedTime>2017-05-23T17:55:36.000Z</LastModifiedTime>
+            <PaymentMethod>PayPal</PaymentMethod>
+            <Status>Complete</Status>
+            <IntegratedMerchantCreditCardEnabled>false</IntegratedMerchantCreditCardEnabled>
+            <PaymentInstrument>PayPal</PaymentInstrument>
+          </CheckoutStatus>
+          <ShippingDetails>
+            <SalesTax>
+              <SalesTaxPercent>0.0</SalesTaxPercent>
+              <SalesTaxState>CA</SalesTaxState>
+              <ShippingIncludedInTax>false</ShippingIncludedInTax>
+              <SalesTaxAmount currencyID="USD">0.0</SalesTaxAmount>
+            </SalesTax>
+            <ShippingServiceOptions>
+              <ShippingService>USPSFirstClass</ShippingService>
+              <ShippingServicePriority>1</ShippingServicePriority>
+              <ExpeditedService>false</ExpeditedService>
+              <ShippingTimeMin>2</ShippingTimeMin>
+              <ShippingTimeMax>3</ShippingTimeMax>
+            </ShippingServiceOptions>
+            <InternationalShippingServiceOption>
+              <ShippingService>InternationalPriorityShipping</ShippingService>
+              <ShippingServicePriority>1</ShippingServicePriority>
+              <ShipToLocation>CA</ShipToLocation>
+              <ShipToLocation>DK</ShipToLocation>
+              <ShipToLocation>RO</ShipToLocation>
+              <ShipToLocation>SK</ShipToLocation>
+              <ShipToLocation>BG</ShipToLocation>
+              <ShipToLocation>CZ</ShipToLocation>
+              <ShipToLocation>FI</ShipToLocation>
+              <ShipToLocation>HU</ShipToLocation>
+              <ShipToLocation>LV</ShipToLocation>
+              <ShipToLocation>LT</ShipToLocation>
+              <ShipToLocation>MT</ShipToLocation>
+              <ShipToLocation>EE</ShipToLocation>
+              <ShipToLocation>AU</ShipToLocation>
+              <ShipToLocation>GR</ShipToLocation>
+              <ShipToLocation>PT</ShipToLocation>
+              <ShipToLocation>CY</ShipToLocation>
+              <ShipToLocation>SI</ShipToLocation>
+              <ShipToLocation>JP</ShipToLocation>
+              <ShipToLocation>CN</ShipToLocation>
+              <ShipToLocation>SE</ShipToLocation>
+              <ShipToLocation>KR</ShipToLocation>
+              <ShipToLocation>ID</ShipToLocation>
+              <ShipToLocation>TW</ShipToLocation>
+              <ShipToLocation>ZA</ShipToLocation>
+              <ShipToLocation>TH</ShipToLocation>
+              <ShipToLocation>BE</ShipToLocation>
+              <ShipToLocation>HK</ShipToLocation>
+              <ShipToLocation>IE</ShipToLocation>
+              <ShipToLocation>NL</ShipToLocation>
+              <ShipToLocation>PL</ShipToLocation>
+              <ShipToLocation>ES</ShipToLocation>
+              <ShipToLocation>IT</ShipToLocation>
+              <ShipToLocation>DE</ShipToLocation>
+              <ShipToLocation>AT</ShipToLocation>
+              <ShipToLocation>RU</ShipToLocation>
+              <ShipToLocation>IL</ShipToLocation>
+              <ShipToLocation>MX</ShipToLocation>
+              <ShipToLocation>NZ</ShipToLocation>
+              <ShipToLocation>PH</ShipToLocation>
+              <ShipToLocation>SG</ShipToLocation>
+              <ShipToLocation>CH</ShipToLocation>
+              <ShipToLocation>NO</ShipToLocation>
+              <ShipToLocation>SA</ShipToLocation>
+              <ShipToLocation>UA</ShipToLocation>
+              <ShipToLocation>AE</ShipToLocation>
+              <ShipToLocation>QA</ShipToLocation>
+              <ShipToLocation>KW</ShipToLocation>
+              <ShipToLocation>BH</ShipToLocation>
+              <ShipToLocation>HR</ShipToLocation>
+              <ShipToLocation>MY</ShipToLocation>
+              <ShipToLocation>BR</ShipToLocation>
+              <ShipToLocation>CL</ShipToLocation>
+              <ShipToLocation>CO</ShipToLocation>
+              <ShipToLocation>CR</ShipToLocation>
+              <ShipToLocation>DO</ShipToLocation>
+              <ShipToLocation>PA</ShipToLocation>
+              <ShipToLocation>TT</ShipToLocation>
+              <ShipToLocation>GT</ShipToLocation>
+              <ShipToLocation>SV</ShipToLocation>
+              <ShipToLocation>HN</ShipToLocation>
+              <ShipToLocation>JM</ShipToLocation>
+            </InternationalShippingServiceOption>
+            <SellingManagerSalesRecordNumber>81027</SellingManagerSalesRecordNumber>
+            <GetItFast>false</GetItFast>
+          </ShippingDetails>
+          <CreatedTime>2017-05-23T12:45:32.000Z</CreatedTime>
+          <PaymentMethods>PayPal</PaymentMethods>
+          <SellerEmail>mtechnologyinc@outlook.com</SellerEmail>
+          <ShippingAddress>
+            <Name>carmen chaparro</Name>
+            <Street1>4213 sandage Ave</Street1>
+            <Street2>
+            </Street2>
+            <CityName>fort worth</CityName>
+            <StateOrProvince>TX</StateOrProvince>
+            <Country>US</Country>
+            <CountryName>United States</CountryName>
+            <Phone>682 300 5779</Phone>
+            <PostalCode>76115</PostalCode>
+            <AddressID>4658212497013</AddressID>
+            <AddressOwner>eBay</AddressOwner>
+            <ExternalAddressID>
+            </ExternalAddressID>
+          </ShippingAddress>
+          <ShippingServiceSelected>
+            <ShippingService>USPSFirstClass</ShippingService>
+            <ShippingServiceCost currencyID="USD">0.0</ShippingServiceCost>
+          </ShippingServiceSelected>
+          <Subtotal currencyID="USD">6.0</Subtotal>
+          <Total currencyID="USD">6.0</Total>
+          <TransactionArray>
+            <Transaction>
+              <AmountPaid currencyID="USD">6.0</AmountPaid>
+              <AdjustmentAmount currencyID="USD">0.0</AdjustmentAmount>
+              <ConvertedAdjustmentAmount currencyID="USD">0.0</ConvertedAdjustmentAmount>
+              <ShippingDetails>
+                <ShipmentTrackingDetails>
+                  <ShippingCarrierUsed>USPS</ShippingCarrierUsed>
+                  <ShipmentTrackingNumber>00040899563588889043</ShipmentTrackingNumber>
+                </ShipmentTrackingDetails>
+              </ShippingDetails>
+              <ConvertedAmountPaid currencyID="USD">6.0</ConvertedAmountPaid>
+              <ConvertedTransactionPrice currencyID="USD">6.0</ConvertedTransactionPrice>
+              <CreatedDate>2017-05-23T12:45:32.000Z</CreatedDate>
+              <DepositType>None</DepositType>
+              <Item>
+                <AutoPay>false</AutoPay>
+                <ItemID>201702147986</ItemID>
+                <ListingType>StoresFixedPrice</ListingType>
+                <PrivateListing>false</PrivateListing>
+                <SellingStatus>
+                  <CurrentPrice currencyID="USD">6.0</CurrentPrice>
+                  <ListingStatus>Active</ListingStatus>
+                </SellingStatus>
+                <GetItFast>false</GetItFast>
+                <ConditionID>1000</ConditionID>
+                <ConditionDisplayName>New</ConditionDisplayName>
+              </Item>
+              <QuantityPurchased>1</QuantityPurchased>
+              <Status>
+                <eBayPaymentStatus>NoPaymentFailure</eBayPaymentStatus>
+                <CheckoutStatus>CheckoutComplete</CheckoutStatus>
+                <LastTimeModified>2017-05-23T17:55:36.000Z</LastTimeModified>
+                <PaymentMethodUsed>PayPal</PaymentMethodUsed>
+                <CompleteStatus>Complete</CompleteStatus>
+                <BuyerSelectedShipping>true</BuyerSelectedShipping>
+                <PaymentHoldStatus>None</PaymentHoldStatus>
+                <IntegratedMerchantCreditCardEnabled>false</IntegratedMerchantCreditCardEnabled>
+                <InquiryStatus>NotApplicable</InquiryStatus>
+                <ReturnStatus>NotApplicable</ReturnStatus>
+              </Status>
+              <TransactionID>1528357347010</TransactionID>
+              <TransactionPrice currencyID="USD">6.0</TransactionPrice>
+              <BestOfferSale>false</BestOfferSale>
+              <ShippingServiceSelected>
+                <ShippingPackageInfo>
+                  <EstimatedDeliveryTimeMin>2017-05-31T07:00:00.000Z</EstimatedDeliveryTimeMin>
+                  <EstimatedDeliveryTimeMax>2017-05-31T07:00:00.000Z</EstimatedDeliveryTimeMax>
+                </ShippingPackageInfo>
+              </ShippingServiceSelected>
+              <TransactionSiteID>US</TransactionSiteID>
+              <Platform>eBay</Platform>
+              <PayPalEmailAddress>mtechnologyinc@outlook.com</PayPalEmailAddress>
+              <BuyerGuaranteePrice currencyID="USD">20000.0</BuyerGuaranteePrice>
+              <Variation>
+                <SKU>6ftlightgd</SKU>
+                <VariationSpecifics>
+                  <NameValueList>
+                    <Name>Color</Name>
+                    <Value>Gold</Value>
+                  </NameValueList>
+                </VariationSpecifics>
+                <VariationTitle>6FT STRONG Braided USB Data Sync Charger Cable Cord for iPhone 7 Plus 6S 5S[Gold]</VariationTitle>
+                <VariationViewItemURL>http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&amp;item=201702147986&amp;vti=Color%09Gold</VariationViewItemURL>
+              </Variation>
+              <ActualShippingCost currencyID="USD">0.0</ActualShippingCost>
+              <ActualHandlingCost currencyID="USD">0.0</ActualHandlingCost>
+              <OrderLineItemID>201702147986-1528357347010</OrderLineItemID>
+              <IntangibleItem>false</IntangibleItem>
+              <ExtendedOrderID>201702147986-1528357347010!130000020296275</ExtendedOrderID>
+              <eBayPlusTransaction>false</eBayPlusTransaction>
+              <GuaranteedShipping>false</GuaranteedShipping>
+            </Transaction>
+          </TransactionArray>
+          <BuyerUserID>carmechaparr_2</BuyerUserID>
+          <PaidTime>2017-05-23T12:45:32.000Z</PaidTime>
+          <ShippedTime>2017-05-23T17:55:36.000Z</ShippedTime>
+          <IntegratedMerchantCreditCardEnabled>false</IntegratedMerchantCreditCardEnabled>
+          <PaymentHoldStatus>None</PaymentHoldStatus>
+          <IsMultiLegShipping>false</IsMultiLegShipping>
+          <SellerUserID>mousecopper</SellerUserID>
+          <SellerEIASToken>nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wJlYWmC5aLogidj6x9nY+seQ==</SellerEIASToken>
+          <CancelStatus>NotApplicable</CancelStatus>
+          <ExtendedOrderID>201702147986-1528357347010!130000020296275</ExtendedOrderID>
+          <ContainseBayPlusTransaction>false</ContainseBayPlusTransaction>
+        </Order>
+      </OrderArray>
+    </GetOrderTransactionsResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

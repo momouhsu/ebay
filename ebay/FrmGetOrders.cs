@@ -1,4 +1,5 @@
-﻿using eBay.Service.Call;
+﻿using ebay.db;
+using eBay.Service.Call;
 using eBay.Service.Core.Soap;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace ebay
 {
     public partial class FrmGetOrders : Form
     {
+        OrderTypeCollection _orders;
+
         public FrmGetOrders()
         {
             InitializeComponent();
@@ -65,14 +68,14 @@ namespace ebay
                 fltr.TimeTo = DatePickStartTo.Value;
 
 
-                OrderTypeCollection orders = apicall.GetOrders(fltr, (TradingRoleCodeType)Enum.Parse(typeof(TradingRoleCodeType), CboRole.SelectedItem.ToString()), (OrderStatusCodeType)Enum.Parse(typeof(OrderStatusCodeType), CboStatus.SelectedItem.ToString()));
-                if (orders.Count == 0)
+                _orders = apicall.GetOrders(fltr, (TradingRoleCodeType)Enum.Parse(typeof(TradingRoleCodeType), CboRole.SelectedItem.ToString()), (OrderStatusCodeType)Enum.Parse(typeof(OrderStatusCodeType), CboStatus.SelectedItem.ToString()));
+                if (_orders.Count == 0)
                 {
 
                     MessageBox.Show("There is no order!");
                     return;
                 }
-                foreach (OrderType order in orders)
+                foreach (OrderType order in _orders)
                 {
                     //string[] listparams = new string[5];
                     //listparams[0] = order.OrderID;
@@ -95,7 +98,7 @@ namespace ebay
                     dr["ClmOrderId"] = order.OrderID;
                     dr["ClmStatus"] = order.OrderStatus.ToString();
                     dr["ClmCreator"] = order.CreatingUserRole.ToString();
-                    dr["ClmItems"] = String.Join(", ", itemids); 
+                    dr["ClmItems"] = String.Join(", ", itemids);
                     dt.Rows.Add(dr);
                 }
 
@@ -106,6 +109,41 @@ namespace ebay
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (_orders != null)
+            {
+                try
+                {
+
+                    new cmd_ebayorder().Import(_orders);
+                    MessageBox.Show("Import success!");
+                }
+                catch
+                {
+
+                    MessageBox.Show("Import faile!");
+                }
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                new cmd_ebayorder().Clear();
+                MessageBox.Show("Clear success!");
+            }
+            catch
+            {
+
+                MessageBox.Show("Clear faile!");
+            }
+             
         }
     }
 }
