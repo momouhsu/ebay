@@ -37,4 +37,3 @@ E:\proj\teddy\mo\ebay\ebay\obj\Debug\ebay.Properties.Resources.resources
 E:\proj\teddy\mo\ebay\ebay\obj\Debug\ebay.csproj.GenerateResource.Cache
 E:\proj\teddy\mo\ebay\ebay\obj\Debug\ebay.FrmGetMyMessagesCall.resources
 E:\proj\teddy\mo\ebay\ebay\bin\Debug\MySql.Data.dll
-E:\proj\teddy\mo\ebay\ebay\obj\Debug\ebay.csprojResolveAssemblyReference.cache

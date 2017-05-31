@@ -57,8 +57,7 @@ namespace ebay.db
                     }
 
                 }
-
-                int s = Convert.ToInt16("s");
+                
 
             });
 
