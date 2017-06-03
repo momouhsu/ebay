@@ -38,14 +38,16 @@
             this.LblStartSep = new System.Windows.Forms.Label();
             this.GrpResult = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ClmOrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmCreator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellingManagerSalesRecordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BuyerUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Timestamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SellerEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LblOrders = new System.Windows.Forms.Label();
             this.BtnGetOrders = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.GrpResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -122,7 +124,7 @@
             this.GrpResult.Controls.Add(this.LblOrders);
             this.GrpResult.Location = new System.Drawing.Point(22, 173);
             this.GrpResult.Name = "GrpResult";
-            this.GrpResult.Size = new System.Drawing.Size(652, 321);
+            this.GrpResult.Size = new System.Drawing.Size(1294, 512);
             this.GrpResult.TabIndex = 95;
             this.GrpResult.TabStop = false;
             this.GrpResult.Text = "Result";
@@ -131,39 +133,50 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClmOrderId,
-            this.ClmStatus,
-            this.ClmCreator,
-            this.ClmItems});
+            this.SellingManagerSalesRecordNumber,
+            this.BuyerUserID,
+            this.AmountPaid,
+            this.Timestamp,
+            this.SellerEmail});
             this.dataGridView1.Location = new System.Drawing.Point(13, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(620, 246);
+            this.dataGridView1.Size = new System.Drawing.Size(1219, 417);
             this.dataGridView1.TabIndex = 13;
             // 
-            // ClmOrderId
+            // SellingManagerSalesRecordNumber
             // 
-            this.ClmOrderId.DataPropertyName = "ClmOrderId";
-            this.ClmOrderId.HeaderText = "Order Id";
-            this.ClmOrderId.Name = "ClmOrderId";
+            this.SellingManagerSalesRecordNumber.DataPropertyName = "SellingManagerSalesRecordNumber";
+            this.SellingManagerSalesRecordNumber.HeaderText = "SellingManagerSalesRecordNumber";
+            this.SellingManagerSalesRecordNumber.Name = "SellingManagerSalesRecordNumber";
+            this.SellingManagerSalesRecordNumber.Width = 200;
             // 
-            // ClmStatus
+            // BuyerUserID
             // 
-            this.ClmStatus.DataPropertyName = "ClmStatus";
-            this.ClmStatus.HeaderText = "Status";
-            this.ClmStatus.Name = "ClmStatus";
+            this.BuyerUserID.DataPropertyName = "BuyerUserID";
+            this.BuyerUserID.HeaderText = "BuyerUserID";
+            this.BuyerUserID.Name = "BuyerUserID";
+            this.BuyerUserID.Width = 200;
             // 
-            // ClmCreator
+            // AmountPaid
             // 
-            this.ClmCreator.DataPropertyName = "ClmCreator";
-            this.ClmCreator.HeaderText = "Creator";
-            this.ClmCreator.Name = "ClmCreator";
+            this.AmountPaid.DataPropertyName = "AmountPaid";
+            this.AmountPaid.HeaderText = "AmountPaid";
+            this.AmountPaid.Name = "AmountPaid";
             // 
-            // ClmItems
+            // Timestamp
             // 
-            this.ClmItems.DataPropertyName = "ClmItems";
-            this.ClmItems.HeaderText = "Items";
-            this.ClmItems.Name = "ClmItems";
+            this.Timestamp.DataPropertyName = "Timestamp";
+            this.Timestamp.HeaderText = "Timestamp";
+            this.Timestamp.Name = "Timestamp";
+            this.Timestamp.Width = 200;
+            // 
+            // SellerEmail
+            // 
+            this.SellerEmail.DataPropertyName = "SellerEmail";
+            this.SellerEmail.HeaderText = "SellerEmail";
+            this.SellerEmail.Name = "SellerEmail";
+            this.SellerEmail.Width = 200;
             // 
             // LblOrders
             // 
@@ -184,7 +197,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(301, 135);
+            this.button1.Location = new System.Drawing.Point(974, 135);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 32);
             this.button1.TabIndex = 104;
@@ -193,18 +206,28 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(477, 135);
+            this.button2.Location = new System.Drawing.Point(1162, 135);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 32);
             this.button2.TabIndex = 105;
             this.button2.Text = "Clear DB";
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(287, 135);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(154, 32);
+            this.button3.TabIndex = 106;
+            this.button3.Text = "Show xml";
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FrmGetOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 751);
+            this.ClientSize = new System.Drawing.Size(1351, 751);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LblTimeRange);
@@ -238,11 +261,13 @@
         private System.Windows.Forms.Label LblOrders;
         private System.Windows.Forms.Button BtnGetOrders;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmOrderId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmCreator;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClmItems;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SellingManagerSalesRecordNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BuyerUserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AmountPaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Timestamp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SellerEmail;
+        private System.Windows.Forms.Button button3;
     }
 }

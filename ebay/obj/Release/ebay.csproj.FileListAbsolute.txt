@@ -18,8 +18,6 @@ E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.exe
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.pdb
 E:\proj\teddy\mo\ebay\ebay\bin\Release\ebay.exe
 E:\proj\teddy\mo\ebay\ebay\bin\Release\ebay.pdb
-E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.dll
-E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.SDK.Attribute.dll
 E:\proj\teddy\mo\ebay\ebay\bin\Release\Interop.MSXML2.dll
 E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.xml
 E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.SDK.Attribute.xml
@@ -33,3 +31,6 @@ E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.Properties.Resources.resources
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.csproj.GenerateResource.Cache
 E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.FrmGetMyMessagesCall.resources
 E:\proj\teddy\mo\ebay\ebay\bin\Release\MySql.Data.dll
+E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.dll
+E:\proj\teddy\mo\ebay\ebay\bin\Release\eBay.Service.SDK.Attribute.dll
+E:\proj\teddy\mo\ebay\ebay\obj\Release\ebay.FrmXml.resources

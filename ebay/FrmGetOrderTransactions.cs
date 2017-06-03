@@ -22,18 +22,18 @@ namespace ebay
         private void BtnGetOrders_Click(object sender, EventArgs e)
         {
 
-            GetOrderTransactionsCall apicall = new GetOrderTransactionsCall(Program.GetApiContext());
-            StringCollection orderids = new StringCollection(TxtTransid.Text.Split(','));
+            //GetOrderTransactionsCall apicall = new GetOrderTransactionsCall(Program.GetApiContext());
+            //StringCollection orderids = new StringCollection(TxtTransid.Text.Split(','));
      
-            OrderTypeCollection list = apicall.GetOrderTransactions(orderids);
-            if(list.Count == 0)
-            {
+            //OrderTypeCollection list = apicall.GetOrderTransactions(orderids);
+            //if(list.Count == 0)
+            //{
 
-                MessageBox.Show("There is no order!");
-                return;
-            }
+            //    MessageBox.Show("There is no order!");
+            //    return;
+            //}
 
-            TxtXml.Text = apicall.SoapResponse;
+            //TxtXml.Text = apicall.SoapResponse;
         }
 
        

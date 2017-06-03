@@ -55,9 +55,12 @@ namespace ebay
             try
             {
                 DataTable dt = new DataTable();
-                dt.Columns.Add(new DataColumn("ClmOrderId"));
-                dt.Columns.Add(new DataColumn("ClmStatus"));
-                dt.Columns.Add(new DataColumn("ClmCreator"));
+                dt.Columns.Add(new DataColumn("SellingManagerSalesRecordNumber"));
+                dt.Columns.Add(new DataColumn("BuyerUserID"));
+                dt.Columns.Add(new DataColumn("AmountPaid"));
+                dt.Columns.Add(new DataColumn("Timestamp"));
+                dt.Columns.Add(new DataColumn("SellerEmail"));
+                dt.Columns.Add(new DataColumn("OrderID"));
                 dt.Columns.Add(new DataColumn("ClmItems"));
 
                 GetOrdersCall apicall = new GetOrdersCall(Program.GetApiContext());
@@ -95,9 +98,12 @@ namespace ebay
                     //LstOrders.Items.Add(vi);
 
                     DataRow dr = dt.NewRow();
-                    dr["ClmOrderId"] = order.OrderID;
-                    dr["ClmStatus"] = order.OrderStatus.ToString();
-                    dr["ClmCreator"] = order.CreatingUserRole.ToString();
+                    dr["SellingManagerSalesRecordNumber"] = order.ShippingDetails.SellingManagerSalesRecordNumber;
+                    dr["BuyerUserID"] = order.BuyerUserID.ToString();
+                    dr["AmountPaid"] = order.AmountPaid.ToString();
+                    dr["Timestamp"] = apicall.ResponseTime.ToString();
+                    dr["SellerEmail"] = order.SellerEmail.ToString();
+                    dr["OrderID"] = order.OrderID.ToString();
                     dr["ClmItems"] = String.Join(", ", itemids);
                     dt.Rows.Add(dr);
                 }
@@ -143,7 +149,37 @@ namespace ebay
 
                 MessageBox.Show("Clear faile!");
             }
-             
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            DataGridViewRow row = null;
+
+            if (this.dataGridView1.SelectedRows.Count != 0)
+            {
+                row = this.dataGridView1.SelectedRows[0];
+            }
+
+            if (this.dataGridView1.SelectedCells.Count != 0)
+            {
+                row = this.dataGridView1.Rows[this.dataGridView1.SelectedCells[0].RowIndex];
+            }
+
+            if (row != null)
+            {
+                GetOrderTransactionsCall apicall = new GetOrderTransactionsCall(Program.GetApiContext());
+                StringCollection orderids = new StringCollection(new string[] { row.Cells["OrderID"].Value.ToString() });
+
+                OrderTypeCollection list = apicall.GetOrderTransactions(orderids);
+                new FrmXml(apicall.SoapResponse).Show();
+
+            }
+            else
+                MessageBox.Show("please select one record!");
+
+
         }
     }
 }
